@@ -1,0 +1,150 @@
+/* Email Marketing Bible — Custom Starlight Theme */
+/* Dark terminal aesthetic with neon orange accent */
+
+/* Force dark mode only */
+:root {
+  color-scheme: dark;
+}
+
+:root,
+[data-theme='light'],
+[data-theme='dark'] {
+  /* Accent / brand */
+  --sl-color-accent-low: #1a0f00;
+  --sl-color-accent: #ff6b1a;
+  --sl-color-accent-high: #ffa666;
+
+  /* Backgrounds */
+  --sl-color-bg-nav: #0a0a0a;
+  --sl-color-bg-sidebar: #0d0d0d;
+  --sl-color-bg: #0a0a0a;
+  --sl-color-bg-inline-code: #1a1a1a;
+
+  /* Hairlines */
+  --sl-color-hairline-shade: #222222;
+  --sl-color-hairline-light: #1a1a1a;
+  --sl-color-hairline: #333333;
+
+  /* Text */
+  --sl-color-text: #e5e5e5;
+  --sl-color-text-accent: #ff6b1a;
+
+  /* Fonts */
+  --sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  /* Font sizes */
+  --sl-text-h1: 2rem;
+  --sl-text-h2: 1.5rem;
+  --sl-text-h3: 1.25rem;
+
+  /* Content width */
+  --sl-content-width: 45rem;
+}
+
+/* Selection */
+::selection {
+  background-color: #ff6b1a;
+  color: #000;
+}
+
+/* Body background */
+body {
+  background-color: #0a0a0a;
+}
+
+/* Hide theme toggle (dark-only) */
+starlight-theme-select,
+[data-theme-select] {
+  display: none !important;
+}
+
+/* Headings in monospace */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  font-family: var(--sl-font-mono);
+}
+
+/* Links */
+.sl-markdown-content a {
+  color: var(--sl-color-accent);
+  text-decoration-color: rgba(255, 107, 26, 0.3);
+}
+
+.sl-markdown-content a:hover {
+  text-decoration-color: var(--sl-color-accent);
+}
+
+/* Code blocks */
+.sl-markdown-content pre {
+  border: 1px solid #333;
+  background-color: #0c0c0c !important;
+}
+
+/* Tables */
+.sl-markdown-content table {
+  border-color: #333;
+}
+
+.sl-markdown-content th {
+  background-color: #141414;
+  border-color: #333;
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sl-markdown-content td {
+  border-color: #222;
+}
+
+.sl-markdown-content tr:hover td {
+  background-color: #111;
+}
+
+/* Sidebar styling */
+nav.sidebar a {
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+}
+
+nav.sidebar a[aria-current='page'] {
+  color: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+}
+
+/* Search styling */
+.search-input {
+  border-color: #333 !important;
+  background-color: #111 !important;
+}
+
+/* Splash page (landing page) overrides */
+[data-has-hero] .page {
+  background: #0a0a0a;
+}
+
+[data-has-hero] header {
+  border-bottom-color: #1a1a1a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

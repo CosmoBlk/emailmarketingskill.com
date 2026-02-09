@@ -1,0 +1,379 @@
+---
+// Custom Hero component — only renders on splash pages (the landing page)
+// For doc pages, Starlight uses its default Hero
+const { data } = Astro.props.entry || {};
+const isSplash = data?.template === 'splash';
+---
+
+{isSplash ? (
+  <div class="hero-landing">
+    <!-- GitHub Badge -->
+    <div class="github-badge-wrap">
+      <a href="https://github.com/CosmoBlk/email-marketing-bible" target="_blank" rel="noopener noreferrer" class="github-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <span>Star on GitHub</span>
+      </a>
+    </div>
+
+    <!-- Hero Title -->
+    <section class="hero-section">
+      <h1 class="hero-title">
+        <span class="hero-title-main">Email Marketing Skill </span>
+        <span class="hero-title-accent">for Claude Code</span>
+      </h1>
+      <p class="hero-subtitle">
+        The most comprehensive email marketing knowledge base ever compiled. 908 sources. 4,798 insights. 55,000 words. Distilled into a Claude Code skill that turns your AI into an email marketing expert.
+      </p>
+      <p class="hero-author">
+        By George Hartley, founder of
+        <a href="https://smartrmail.com" target="_blank" rel="noopener noreferrer">SmartrMail</a>
+        and
+        <a href="https://obooko.com" target="_blank" rel="noopener noreferrer">Obooko</a>
+      </p>
+    </section>
+
+    <!-- Terminal -->
+    <section class="terminal-section">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-label">Terminal</span>
+          <button class="terminal-copy" onclick="
+            navigator.clipboard.writeText('git clone https://github.com/CosmoBlk/email-marketing-bible.git\ncp -r email-marketing-bible ~/.claude/skills/email-marketing-bible');
+            this.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><polyline points=&quot;20 6 9 17 4 12&quot;></polyline></svg><span>Copied</span>';
+            setTimeout(() => this.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;13&quot; height=&quot;13&quot; rx=&quot;2&quot; ry=&quot;2&quot;></rect><path d=&quot;M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1&quot;></path></svg><span>Copy</span>', 2000);
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line"><span class="terminal-prompt">$</span> git clone https://github.com/CosmoBlk/email-marketing-bible.git</div>
+          <div class="terminal-line"><span class="terminal-prompt">$</span> cp -r email-marketing-bible ~/.claude/skills/email-marketing-bible</div>
+        </div>
+      </div>
+      <p class="terminal-caption">Installs the email marketing skill to your Claude Code project</p>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="actions-section">
+      <a href="/introduction/" class="btn btn-primary">Read the Full Guide</a>
+      <a href="https://github.com/CosmoBlk/email-marketing-bible" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on GitHub</a>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat"><span class="stat-number">908</span><span class="stat-label">Sources Crawled</span></div>
+        <div class="stat stat-bordered"><span class="stat-number">55,000</span><span class="stat-label">Words</span></div>
+        <div class="stat"><span class="stat-number">40</span><span class="stat-label">Expert Contributors</span></div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="features-section">
+      <h2 class="section-heading">What you get</h2>
+      <div class="features-grid">
+        <div class="feature"><span class="feature-arrow">&gt;</span> Analyse your email setup and identify gaps</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Draft email copy using proven frameworks (PAS, AIDA, BAB)</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Build automation flows: welcome series, abandoned cart, win-back</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Pull benchmarks for your industry from 19 vertical playbooks</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Troubleshoot deliverability issues with a 10-step diagnostic</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Compare email platforms for your specific needs</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Review compliance across GDPR, CAN-SPAM, CASL</div>
+        <div class="feature"><span class="feature-arrow">&gt;</span> Write cold email sequences with proper infrastructure setup</div>
+      </div>
+    </section>
+
+    <!-- Industry Playbooks -->
+    <section class="playbooks-section">
+      <h2 class="section-heading">Playbooks for 19 industries</h2>
+      <p class="section-subtext">Every vertical gets its own chapter with segment-specific tactics, benchmarks, and automation flows.</p>
+      <div class="pills-wrap">
+        <span class="pill pill-highlight">Ecommerce DTC</span>
+        <span class="pill pill-highlight">SaaS B2B</span>
+        <span class="pill">SaaS B2C</span>
+        <span class="pill pill-highlight">Newsletter & Creator</span>
+        <span class="pill pill-highlight">Agency</span>
+        <span class="pill">Nonprofit</span>
+        <span class="pill">Healthcare</span>
+        <span class="pill">Financial Services</span>
+        <span class="pill">Real Estate</span>
+        <span class="pill">Travel & Hospitality</span>
+        <span class="pill">Education</span>
+        <span class="pill">Professional Services</span>
+        <span class="pill pill-highlight">Retail</span>
+        <span class="pill">Events</span>
+        <span class="pill">B2B Manufacturing</span>
+        <span class="pill">Restaurant & Food</span>
+        <span class="pill">Fitness</span>
+        <span class="pill">Media & Publishing</span>
+        <span class="pill">Marketplace & Platform</span>
+      </div>
+    </section>
+
+    <!-- Expert Contributors -->
+    <section class="experts-section">
+      <h2 class="section-heading">Built on insights from 40 leading practitioners</h2>
+      <div class="experts-grid">
+        <div class="expert-card"><div class="expert-name">Chad S. White</div><div class="expert-role">Strategy</div><div class="expert-company">Oracle</div></div>
+        <div class="expert-card"><div class="expert-name">Joanna Wiebe</div><div class="expert-role">Copywriting</div><div class="expert-company">Copyhackers</div></div>
+        <div class="expert-card"><div class="expert-name">Chase Dimond</div><div class="expert-role">Ecommerce</div><div class="expert-company">Structured Agency</div></div>
+        <div class="expert-card"><div class="expert-name">Nathan Barry</div><div class="expert-role">Platform</div><div class="expert-company">Kit (ConvertKit)</div></div>
+        <div class="expert-card"><div class="expert-name">Ann Handley</div><div class="expert-role">Strategy</div><div class="expert-company">MarketingProfs</div></div>
+        <div class="expert-card"><div class="expert-name">Troy Ericson</div><div class="expert-role">Deliverability</div><div class="expert-company">EmailDeliverability.com</div></div>
+        <div class="expert-card"><div class="expert-name">Tyler Denk</div><div class="expert-role">Newsletter</div><div class="expert-company">beehiiv</div></div>
+        <div class="expert-card"><div class="expert-name">Ben Settle</div><div class="expert-role">Copywriting</div><div class="expert-company">Email Players</div></div>
+      </div>
+    </section>
+
+    <!-- Chapter Overview -->
+    <section class="chapters-section">
+      <h2 class="section-heading">16 chapters. 4 appendices. Everything you need.</h2>
+      <div class="chapters-list">
+        <a href="/01-fundamentals/" class="chapter-item"><span class="chapter-num">1.</span> The Fundamentals</a>
+        <a href="/02-building-your-list/" class="chapter-item"><span class="chapter-num">2.</span> Building Your List</a>
+        <a href="/03-segmentation-and-personalisation/" class="chapter-item"><span class="chapter-num">3.</span> Segmentation and Personalisation</a>
+        <a href="/04-the-emails-that-make-money/" class="chapter-item"><span class="chapter-num">4.</span> The Emails That Make Money</a>
+        <a href="/05-copywriting-that-converts/" class="chapter-item"><span class="chapter-num">5.</span> Copywriting That Converts</a>
+        <a href="/06-design-and-technical/" class="chapter-item"><span class="chapter-num">6.</span> Design and Technical</a>
+        <a href="/07-deliverability/" class="chapter-item"><span class="chapter-num">7.</span> Deliverability</a>
+        <a href="/08-testing-and-optimisation/" class="chapter-item"><span class="chapter-num">8.</span> Testing and Optimisation</a>
+        <a href="/09-analytics-and-measurement/" class="chapter-item"><span class="chapter-num">9.</span> Analytics and Measurement</a>
+        <a href="/10-compliance-and-privacy/" class="chapter-item"><span class="chapter-num">10.</span> Compliance and Privacy</a>
+        <a href="/11-industry-playbooks/" class="chapter-item"><span class="chapter-num">11.</span> Industry Playbooks (19 verticals)</a>
+        <a href="/12-choosing-your-platform/" class="chapter-item"><span class="chapter-num">12.</span> Choosing Your Platform</a>
+        <a href="/13-cold-email-and-b2b-outbound/" class="chapter-item"><span class="chapter-num">13.</span> Cold Email and B2B Outbound</a>
+        <a href="/14-ai-and-the-future-of-email/" class="chapter-item"><span class="chapter-num">14.</span> AI and the Future of Email</a>
+        <a href="/15-company-case-studies/" class="chapter-item"><span class="chapter-num">15.</span> Company Case Studies</a>
+        <a href="/16-expert-directory/" class="chapter-item"><span class="chapter-num">16.</span> Expert Directory</a>
+      </div>
+      <div class="chapters-appendices">
+        <a href="/appendix-a-benchmarks/" class="chapter-item chapter-appendix"><span class="chapter-num">A</span> Benchmarks by Industry</a>
+        <a href="/appendix-b-frequency-guide/" class="chapter-item chapter-appendix"><span class="chapter-num">B</span> Email Frequency Guide</a>
+        <a href="/appendix-c-calendar/" class="chapter-item chapter-appendix"><span class="chapter-num">C</span> Email Marketing Calendar</a>
+        <a href="/appendix-d-methodology/" class="chapter-item chapter-appendix"><span class="chapter-num">D</span> Methodology and Sources</a>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="cases-section">
+      <h2 class="section-heading">Real results from 10 companies</h2>
+      <p class="section-subtext">See exactly how these companies turned email into a competitive advantage, with real numbers.</p>
+      <div class="cases-wrap">
+        <span class="case-name">Casper</span>
+        <span class="case-name">Morning Brew</span>
+        <span class="case-name">Duolingo</span>
+        <span class="case-name">Spotify</span>
+        <span class="case-name">Booking.com</span>
+        <span class="case-name">Amazon</span>
+        <span class="case-name">Patagonia</span>
+        <span class="case-name">Nike</span>
+        <span class="case-name">Starbucks</span>
+        <span class="case-name">Basecamp</span>
+      </div>
+    </section>
+
+    <!-- Email Capture -->
+    <section class="capture-section">
+      <div class="capture-card">
+        <h2 class="section-heading">Download the complete Email Marketing Bible as PDF</h2>
+        <p class="capture-subtext">Get the full 55,000-word guide as a PDF. Free. We'll email you when new chapters or major updates are published.</p>
+        <form class="capture-form" id="email-form">
+          <input type="email" name="email" placeholder="you@company.com" required class="capture-input" />
+          <button type="submit" class="btn btn-primary capture-btn">Get the PDF</button>
+        </form>
+        <p class="capture-disclaimer">No spam. Just the guide and occasional updates. Unsubscribe anytime.</p>
+        <p class="capture-status" id="form-status"></p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section">
+      <h2 class="section-heading-left">About the Email Marketing Bible</h2>
+      <div class="about-body">
+        <p>The Email Marketing Bible is the most comprehensive email marketing guide available. v0.4, published February 2026. It was built by crawling 908 sources: industry reports from Litmus, Klaviyo, HubSpot, and Salesforce; practitioner blogs; academic research; platform documentation; and thousands of community discussions from Reddit, Shopify forums, and X.</p>
+        <p>Every claim is backed by data. Every recommendation has been tested by practitioners. It covers everything from list building to deliverability to cold email infrastructure, with specific playbooks for 19 industries including ecommerce, SaaS, newsletters, agencies, nonprofits, healthcare, real estate, and more.</p>
+        <p>The guide is open source and free. The Claude Code skill distils the full 55,000 words into a structured knowledge base that Claude can reference in real time when helping you with email strategy, copywriting, automation flows, or deliverability troubleshooting.</p>
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    document.getElementById('email-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value;
+      const status = document.getElementById('form-status');
+      const btn = form.querySelector('button');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        if (res.ok) {
+          status.textContent = 'Check your email for the download link!';
+          status.style.color = '#ff6b1a';
+          form.email.value = '';
+          btn.textContent = 'Sent!';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        status.textContent = 'Something went wrong. Try again.';
+        status.style.color = '#ff4444';
+        btn.textContent = 'Get the PDF';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+  <style>
+    .hero-landing {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* GitHub Badge */
+    .github-badge-wrap { text-align: center; padding: 2rem 0 1rem; }
+    .github-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.25rem 0.75rem; border-radius: 9999px;
+      border: 2px solid #333; color: #888;
+      font-family: var(--sl-font-mono); font-size: 0.75rem;
+      text-decoration: none; transition: all 0.3s;
+    }
+    .github-badge:hover { border-color: #ff6b1a; color: #fff; }
+
+    /* Hero */
+    .hero-section { text-align: center; padding: 3rem 1.5rem 4rem; max-width: 720px; margin: 0 auto; }
+    .hero-title { font-family: var(--sl-font-mono); font-weight: 700; font-size: clamp(1.75rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-title-main { color: #e5e5e5; }
+    .hero-title-accent { color: #ff6b1a; }
+    .hero-subtitle { color: #888; font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin: 0 auto 2rem; }
+    .hero-author { color: #555; font-family: var(--sl-font-mono); font-size: 0.85rem; }
+    .hero-author a { color: #777; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s; }
+    .hero-author a:hover { color: #ff6b1a; }
+
+    /* Terminal */
+    .terminal-section { padding: 0 1.5rem 4rem; }
+    .terminal { max-width: 720px; margin: 0 auto; border: 2px solid #333; background: #0c0c0c; overflow: hidden; }
+    .terminal-header { display: flex; justify-content: space-between; align-items: center; padding: 0.625rem 1rem; background: #1a1a1a; border-bottom: 2px solid #333; }
+    .terminal-label { font-family: var(--sl-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; }
+    .terminal-copy {
+      display: flex; align-items: center; gap: 0.375rem; padding: 0.25rem 0.625rem;
+      background: none; border: none; color: #888; cursor: pointer;
+      font-family: var(--sl-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+    .terminal-copy:hover { color: #fff; }
+    .terminal-body { padding: 1.5rem; font-family: var(--sl-font-mono); font-size: 0.9rem; overflow-x: auto; }
+    .terminal-line { white-space: pre; margin-bottom: 0.5rem; color: #e5e5e5; }
+    .terminal-prompt { color: #ff6b1a; margin-right: 0.75rem; user-select: none; }
+    .terminal-caption { text-align: center; color: #888; font-family: var(--sl-font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-top: 1rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+
+    /* Buttons */
+    .actions-section { text-align: center; padding: 0 1.5rem 5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.75rem 2rem; font-family: var(--sl-font-mono); font-size: 0.9rem; font-weight: 700;
+      border: 3px solid; border-radius: 9999px; text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .btn-primary { border-color: #ff6b1a; color: #ff6b1a; background: transparent; }
+    .btn-primary:hover { background: #ff6b1a; color: #000; }
+    .btn-secondary { border-color: #333; color: #e5e5e5; background: transparent; }
+    .btn-secondary:hover { background: #e5e5e5; color: #000; }
+
+    /* Stats */
+    .stats-section { padding: 3rem 1.5rem; border-top: 2px solid #1a1a1a; border-bottom: 2px solid #1a1a1a; margin-bottom: 5rem; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 900px; margin: 0 auto; text-align: center; }
+    .stat { display: flex; flex-direction: column; align-items: center; }
+    .stat-bordered { border-left: 2px solid #1a1a1a; border-right: 2px solid #1a1a1a; }
+    .stat-number { font-family: var(--sl-font-mono); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #e5e5e5; margin-bottom: 0.5rem; }
+    .stat-label { font-family: var(--sl-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #888; }
+
+    /* Section headings */
+    .section-heading { font-family: var(--sl-font-mono); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; color: #e5e5e5; text-align: center; margin-bottom: 3rem; }
+    .section-heading-left { font-family: var(--sl-font-mono); font-size: 1.5rem; font-weight: 700; color: #e5e5e5; margin-bottom: 1.5rem; }
+    .section-subtext { color: #888; text-align: center; max-width: 600px; margin: -2rem auto 2.5rem; }
+
+    /* Features */
+    .features-section { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 3rem; }
+    .feature { color: rgba(229,229,229,0.9); line-height: 1.6; }
+    .feature-arrow { color: #ff6b1a; font-family: var(--sl-font-mono); margin-right: 0.75rem; }
+
+    /* Playbooks */
+    .playbooks-section { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 6rem; text-align: center; }
+    .pills-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+    .pill { padding: 0.375rem 0.75rem; border: 2px solid #333; border-radius: 9999px; font-family: var(--sl-font-mono); font-size: 0.85rem; color: #888; transition: all 0.2s; }
+    .pill:hover { border-color: #555; color: #aaa; }
+    .pill-highlight { border-color: #ff6b1a; color: #e5e5e5; }
+    .pill-highlight:hover { background: rgba(255,107,26,0.1); }
+
+    /* Experts */
+    .experts-section { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .experts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .expert-card { padding: 1.25rem; background: #111; border: 2px solid #333; border-radius: 0.375rem; transition: border-color 0.2s; }
+    .expert-card:hover { border-color: #444; }
+    .expert-name { font-weight: 700; color: #e5e5e5; margin-bottom: 0.25rem; }
+    .expert-role { font-family: var(--sl-font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 0.25rem; }
+    .expert-company { font-size: 0.85rem; color: #666; }
+
+    /* Chapters */
+    .chapters-section { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .chapters-list, .chapters-appendices { display: flex; flex-direction: column; gap: 0.75rem; }
+    .chapters-appendices { margin-top: 2rem; }
+    .chapter-item { display: block; padding-bottom: 0.75rem; border-bottom: 2px solid #1a1a1a; font-family: var(--sl-font-mono); font-size: 0.9rem; color: #e5e5e5; text-decoration: none; transition: padding-left 0.2s; }
+    .chapter-item:hover { padding-left: 0.5rem; }
+    .chapter-item:hover .chapter-num { color: #ff6b1a; }
+    .chapter-num { color: #ff6b1a; display: inline-block; width: 2rem; margin-right: 0.5rem; }
+    .chapter-appendix { color: #aaa; }
+    .chapter-appendix:hover { color: #e5e5e5; }
+
+    /* Cases */
+    .cases-section { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 6rem; text-align: center; }
+    .cases-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; }
+    .case-name { font-family: var(--sl-font-mono); font-size: 0.9rem; color: #888; transition: color 0.2s; cursor: default; }
+    .case-name:hover { color: #e5e5e5; }
+
+    /* Email Capture */
+    .capture-section { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .capture-card { background: #111; border: 2px solid #222; border-radius: 0.75rem; padding: 2rem 3rem; text-align: center; }
+    .capture-subtext { color: #888; max-width: 500px; margin: 0 auto 2rem; }
+    .capture-form { display: flex; gap: 0.75rem; max-width: 480px; margin: 0 auto; }
+    .capture-input {
+      flex: 1; background: #111; border: 2px solid #333; padding: 0.75rem 1rem;
+      color: #e5e5e5; font-family: var(--sl-font-mono); font-size: 0.9rem;
+      border-radius: 0.375rem; outline: none; transition: border-color 0.2s;
+    }
+    .capture-input::placeholder { color: #888; }
+    .capture-input:focus { border-color: #ff6b1a; }
+    .capture-btn { border-radius: 0.375rem !important; white-space: nowrap; padding: 0.75rem 1.5rem !important; }
+    .capture-disclaimer { font-family: var(--sl-font-mono); font-size: 0.7rem; color: #444; margin-top: 0.75rem; }
+    .capture-status { font-family: var(--sl-font-mono); font-size: 0.85rem; margin-top: 0.75rem; }
+
+    /* About */
+    .about-section { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .about-body { display: flex; flex-direction: column; gap: 1.5rem; }
+    .about-body p { color: #ccc; line-height: 1.7; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .experts-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .stat-bordered { border: none; }
+      .capture-form { flex-direction: column; }
+      .capture-card { padding: 2rem 1.5rem; }
+      .actions-section { flex-direction: column; align-items: center; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .experts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+) : (
+  <slot />
+)}
