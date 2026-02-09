@@ -1,8 +1,8 @@
 ---
 // Custom Hero component — only renders on splash pages (the landing page)
-// For doc pages, Starlight uses its default Hero
-const { data } = Astro.props.entry || {};
-const isSplash = data?.template === 'splash';
+// For doc pages, falls through to default slot
+const route = Astro.locals.starlightRoute;
+const isSplash = route?.entry?.data?.template === 'splash';
 ---
 
 {isSplash ? (
