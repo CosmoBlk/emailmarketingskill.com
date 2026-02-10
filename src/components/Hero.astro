@@ -128,7 +128,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
 
     <!-- Chapter Overview -->
     <section class="chapters-section">
-      <h2 class="section-heading">16 chapters. 4 appendices. Everything you need.</h2>
+      <h2 class="section-heading">16 chapters. 4 appendices. Everything you need. <a href="https://www.emailmarketingskill.com/introduction/" class="read-now-link">Read it now &raquo;</a></h2>
       <div class="chapters-list">
         <a href="/01-fundamentals/" class="chapter-item"><span class="chapter-num">1.</span> The Fundamentals</a>
         <a href="/02-building-your-list/" class="chapter-item"><span class="chapter-num">2.</span> Building Your List</a>
@@ -298,6 +298,8 @@ const isSplash = route?.entry?.data?.template === 'splash';
     .section-heading { font-family: var(--sl-font-mono); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; color: #e5e5e5; text-align: center; margin-bottom: 3rem; }
     .section-heading-left { font-family: var(--sl-font-mono); font-size: 1.5rem; font-weight: 700; color: #e5e5e5; margin-bottom: 1.5rem; }
     .section-subtext { color: #888; text-align: center; max-width: 600px; margin: -2rem auto 2.5rem; }
+    .read-now-link { color: #ff6b1a; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .read-now-link:hover { color: #ffa666; text-decoration: underline; }
 
     /* Features */
     .features-section { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem; }
