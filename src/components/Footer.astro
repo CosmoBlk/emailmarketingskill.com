@@ -1,6 +1,23 @@
 ---
 // Custom Footer for all pages
+// On doc pages: includes email capture CTA above the footer
+const route = Astro.locals.starlightRoute;
+const isSplash = route?.entry?.data?.template === 'splash';
 ---
+
+{!isSplash && (
+  <div class="doc-email-capture">
+    <h3>Download the Email Marketing Bible as PDF</h3>
+    <p>The full 55,000-word guide. Free. Get updates when new chapters drop.</p>
+    <form class="doc-capture-form" id="doc-email-form">
+      <input type="email" name="email" placeholder="you@company.com" required class="doc-capture-input" />
+      <button type="submit" class="doc-capture-btn">Get the PDF</button>
+    </form>
+    <p class="doc-capture-disclaimer">No spam. Unsubscribe anytime.</p>
+    <p class="doc-capture-status" id="doc-form-status"></p>
+  </div>
+)}
+
 <footer class="emb-footer">
   <div class="emb-footer-inner">
     <div class="emb-footer-left">
@@ -23,9 +40,43 @@
   </div>
 </footer>
 
+{!isSplash && (
+  <script is:inline>
+    document.getElementById('doc-email-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value;
+      const status = document.getElementById('doc-form-status');
+      const btn = form.querySelector('button');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        if (res.ok) {
+          status.textContent = 'Check your email for the download link!';
+          status.style.color = '#ff6b1a';
+          form.email.value = '';
+          btn.textContent = 'Sent!';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        status.textContent = 'Something went wrong. Try again.';
+        status.style.color = '#ff4444';
+        btn.textContent = 'Get the PDF';
+        btn.disabled = false;
+      }
+    });
+  </script>
+)}
+
 <style>
   .emb-footer {
-    border-top: 2px solid #1a1a1a;
+    border-top: 1px solid var(--sl-color-hairline-shade, #e5e5e5);
     padding: 3rem 1.5rem;
   }
   .emb-footer-inner {
@@ -76,6 +127,12 @@
   .emb-footer-right a:hover {
     color: #ff6b1a;
   }
+
+  /* Landing page footer stays dark */
+  [data-has-hero] .emb-footer {
+    border-top-color: #1a1a1a;
+  }
+
   @media (max-width: 768px) {
     .emb-footer-inner {
       flex-direction: column;

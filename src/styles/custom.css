@@ -1,34 +1,10 @@
 /* Email Marketing Bible — Custom Starlight Theme */
-/* Dark terminal aesthetic with neon orange accent */
+/* Landing page: dark terminal aesthetic. Doc pages: light GitHub-style. */
 
-/* Force dark mode only */
+/* ============================================
+   GLOBAL (shared across all pages)
+   ============================================ */
 :root {
-  color-scheme: dark;
-}
-
-:root,
-[data-theme='light'],
-[data-theme='dark'] {
-  /* Accent / brand */
-  --sl-color-accent-low: #1a0f00;
-  --sl-color-accent: #ff6b1a;
-  --sl-color-accent-high: #ffa666;
-
-  /* Backgrounds */
-  --sl-color-bg-nav: #0a0a0a;
-  --sl-color-bg-sidebar: #0d0d0d;
-  --sl-color-bg: #0a0a0a;
-  --sl-color-bg-inline-code: #1a1a1a;
-
-  /* Hairlines */
-  --sl-color-hairline-shade: #222222;
-  --sl-color-hairline-light: #1a1a1a;
-  --sl-color-hairline: #333333;
-
-  /* Text */
-  --sl-color-text: #e5e5e5;
-  --sl-color-text-accent: #ff6b1a;
-
   /* Fonts */
   --sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
@@ -42,21 +18,113 @@
   --sl-content-width: 45rem;
 }
 
+/* Hide theme toggle everywhere */
+starlight-theme-select,
+[data-theme-select] {
+  display: none !important;
+}
+
 /* Selection */
 ::selection {
   background-color: #ff6b1a;
   color: #000;
 }
 
-/* Body background */
-body {
+
+/* ============================================
+   LANDING PAGE (splash page) — DARK THEME
+   ============================================ */
+
+/* Hide the entire Starlight header on splash/landing page */
+[data-has-hero] .header {
+  display: none !important;
+}
+
+/* Dark background for landing page */
+[data-has-hero] .page {
+  background: #0a0a0a;
+}
+
+[data-has-hero] body,
+[data-has-hero] {
   background-color: #0a0a0a;
 }
 
-/* Hide theme toggle (dark-only) */
-starlight-theme-select,
-[data-theme-select] {
-  display: none !important;
+/* Remove sidebar gap on landing page */
+[data-has-hero] .main-pane {
+  padding-inline-start: 0;
+}
+
+
+/* ============================================
+   DOC PAGES — LIGHT THEME (GitHub-style)
+   ============================================ */
+
+/* Light mode overrides for doc pages (non-splash) */
+:root,
+[data-theme='light'],
+[data-theme='dark'] {
+  /* Accent / brand */
+  --sl-color-accent-low: #fff3eb;
+  --sl-color-accent: #ff6b1a;
+  --sl-color-accent-high: #c44d00;
+
+  /* Backgrounds — white/light */
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #fafafa;
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-inline-code: #f6f6f6;
+
+  /* Hairlines — light grey */
+  --sl-color-hairline-shade: #e5e5e5;
+  --sl-color-hairline-light: #ebebeb;
+  --sl-color-hairline: #d1d1d1;
+
+  /* Text — dark */
+  --sl-color-text: #1f2328;
+  --sl-color-text-accent: #ff6b1a;
+
+  /* White text in header nav */
+  --sl-color-white: #1f2328;
+  --sl-color-gray-1: #555;
+  --sl-color-gray-2: #666;
+  --sl-color-gray-3: #888;
+  --sl-color-gray-4: #aaa;
+  --sl-color-gray-5: #d1d1d1;
+  --sl-color-gray-6: #ebebeb;
+  --sl-color-gray-7: #f6f6f6;
+  --sl-color-black: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* Header bar on doc pages: white bg, dark text, bottom border */
+.header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* Sidebar on doc pages */
+nav.sidebar {
+  background: #fafafa;
+  border-right: 1px solid #e5e5e5;
+}
+
+nav.sidebar a {
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+  color: #555;
+}
+
+nav.sidebar a:hover {
+  color: #1f2328;
+}
+
+nav.sidebar a[aria-current='page'] {
+  color: #ff6b1a;
+  border-color: #ff6b1a;
 }
 
 /* Headings in monospace */
@@ -65,86 +133,257 @@ starlight-theme-select,
 .sl-markdown-content h3,
 .sl-markdown-content h4 {
   font-family: var(--sl-font-mono);
+  color: #1f2328;
 }
 
-/* Links */
+/* Links in content */
 .sl-markdown-content a {
-  color: var(--sl-color-accent);
+  color: #ff6b1a;
   text-decoration-color: rgba(255, 107, 26, 0.3);
 }
 
 .sl-markdown-content a:hover {
-  text-decoration-color: var(--sl-color-accent);
+  text-decoration-color: #ff6b1a;
 }
 
-/* Code blocks */
+/* Code blocks — light */
 .sl-markdown-content pre {
-  border: 1px solid #333;
-  background-color: #0c0c0c !important;
+  border: 1px solid #e5e5e5;
+  background-color: #f6f6f6 !important;
 }
 
-/* Tables */
+.sl-markdown-content code {
+  color: #1f2328;
+}
+
+/* Tables — light */
 .sl-markdown-content table {
-  border-color: #333;
+  border-color: #e5e5e5;
 }
 
 .sl-markdown-content th {
-  background-color: #141414;
-  border-color: #333;
+  background-color: #f6f6f6;
+  border-color: #e5e5e5;
   font-family: var(--sl-font-mono);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: #555;
 }
 
 .sl-markdown-content td {
-  border-color: #222;
+  border-color: #e5e5e5;
+  color: #1f2328;
 }
 
 .sl-markdown-content tr:hover td {
-  background-color: #111;
+  background-color: #fafafa;
 }
 
-/* Sidebar styling */
-nav.sidebar a {
-  font-family: var(--sl-font-mono);
-  font-size: 0.85rem;
+/* Body text */
+.sl-markdown-content p,
+.sl-markdown-content li {
+  color: #1f2328;
+  line-height: 1.75;
 }
 
-nav.sidebar a[aria-current='page'] {
-  color: var(--sl-color-accent);
-  border-color: var(--sl-color-accent);
+/* Strong/bold */
+.sl-markdown-content strong {
+  color: #1f2328;
 }
 
-/* Search styling */
+/* Blockquotes */
+.sl-markdown-content blockquote {
+  border-left-color: #ff6b1a;
+  background: #fff8f3;
+  color: #555;
+}
+
+/* Horizontal rules */
+.sl-markdown-content hr {
+  border-color: #e5e5e5;
+}
+
+/* Search styling for light mode */
 .search-input {
-  border-color: #333 !important;
-  background-color: #111 !important;
+  border-color: #e5e5e5 !important;
+  background-color: #f6f6f6 !important;
+  color: #1f2328 !important;
 }
 
-/* Splash page (landing page) overrides */
-[data-has-hero] .page {
-  background: #0a0a0a;
+/* Right sidebar (table of contents) */
+.right-sidebar {
+  border-left: 1px solid #e5e5e5;
 }
 
-[data-has-hero] header {
-  border-bottom-color: #1a1a1a;
+/* Pagination (prev/next links) */
+.pagination-links a {
+  border-color: #e5e5e5 !important;
+  color: #555;
 }
 
-/* Scrollbar */
+.pagination-links a:hover {
+  border-color: #ff6b1a !important;
+  color: #ff6b1a;
+}
+
+/* Scrollbar — light */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #fafafa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #d1d1d1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #aaa;
+}
+
+
+/* ============================================
+   BACK ARROW — top-left of doc pages
+   ============================================ */
+
+/* Style the site title link in header as a back arrow */
+.site-title::before {
+  content: '←';
+  margin-right: 0.5rem;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.site-title:hover::before {
+  color: #ff6b1a;
+}
+
+
+/* ============================================
+   EMAIL CAPTURE BANNER on doc pages
+   ============================================ */
+
+.doc-email-capture {
+  background: #f8f4f0;
+  border: 2px solid #ff6b1a;
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  margin: 3rem 0 2rem;
+  text-align: center;
+}
+
+.doc-email-capture h3 {
+  font-family: var(--sl-font-mono) !important;
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  color: #1f2328 !important;
+  margin: 0 0 0.5rem !important;
+}
+
+.doc-email-capture p {
+  font-size: 0.9rem;
+  color: #555 !important;
+  margin: 0 0 1rem !important;
+}
+
+.doc-capture-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.doc-capture-input {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid #d1d1d1;
+  padding: 0.6rem 0.75rem;
+  color: #1f2328;
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.doc-capture-input::placeholder {
+  color: #aaa;
+}
+
+.doc-capture-input:focus {
+  border-color: #ff6b1a;
+}
+
+.doc-capture-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #ff6b1a;
+  color: #ffffff;
+  border: 2px solid #ff6b1a;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.doc-capture-btn:hover {
+  background: #e55a00;
+  border-color: #e55a00;
+}
+
+.doc-capture-disclaimer {
+  font-family: var(--sl-font-mono);
+  font-size: 0.65rem !important;
+  color: #aaa !important;
+  margin-top: 0.5rem !important;
+}
+
+.doc-capture-status {
+  font-family: var(--sl-font-mono);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .doc-capture-form {
+    flex-direction: column;
+  }
+  .doc-email-capture {
+    padding: 1.25rem 1rem;
+  }
+}
+
+
+/* ============================================
+   LANDING PAGE dark overrides
+   (must come AFTER doc page styles to take precedence)
+   ============================================ */
+
+/* Force dark colours inside the splash/hero landing div */
+[data-has-hero] {
+  --sl-color-bg: #0a0a0a;
+  --sl-color-bg-nav: #0a0a0a;
+  --sl-color-bg-sidebar: #0a0a0a;
+  --sl-color-text: #e5e5e5;
+  --sl-color-hairline: #333;
+  --sl-color-hairline-shade: #222;
+  --sl-color-hairline-light: #1a1a1a;
+  --sl-color-bg-inline-code: #1a1a1a;
+  --sl-color-white: #e5e5e5;
+  --sl-color-black: #0a0a0a;
+  --sl-color-accent-low: #1a0f00;
+  --sl-color-accent-high: #ffa666;
+}
+
+[data-has-hero] body {
+  background-color: #0a0a0a !important;
 }
