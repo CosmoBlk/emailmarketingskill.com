@@ -8,7 +8,7 @@ sidebar:
 
 Choosing an email platform is one of those decisions that feels reversible but rarely is. The switching costs are real. Not just in dollars, but in time, rebuilt automations, re-warmed domains, and the inevitable dip in deliverability during migration. I've watched companies spend six months recovering from a poorly planned platform switch.
 
-the good news is that the market in 2026 offers genuine choice across every price point and use case. The bad news is that the abundance of options makes the decision harder, not easier. There are over 400 email marketing tools on the market today. Most of them are mediocre. About 15 are genuinely worth your attention, and the right one for you depends entirely on your business model, technical capabilities, and growth trajectory.
+The good news is that the market in 2026 offers genuine choice across every price point and use case. The bad news is that the abundance of options makes the decision harder, not easier. There are over 400 email marketing tools on the market today. Most of them are mediocre. About 15 are genuinely worth your attention, and the right one for you depends entirely on your business model, technical capabilities, and growth trajectory.
 
 ### How to Choose
 
@@ -42,7 +42,7 @@ Here's an expanded comparison of the major platforms worth considering in 2026.
 
 | Platform | Best For | Starting Price | Key Strength |
 |---|---|---|---|
-| Mailchimp | Small businesses | Free (500 contacts) | Ease of use, AI features |
+| Mailchimp | Small businesses | Free (500 contacts) | Ease of use, brand recognition |
 | Klaviyo | Ecommerce (Shopify) | Free (250 contacts) | Deep ecommerce data, flows |
 | Constant Contact | Small biz, nonprofits | $12/mo (500 contacts) | 300+ integrations |
 | Brevo | Multi-channel | Free (300 emails/day) | All-in-one (email + SMS + chat) |
@@ -53,12 +53,13 @@ Here's an expanded comparison of the major platforms worth considering in 2026.
 | ActiveCampaign | Automation-heavy | $15/mo | 135+ triggers and actions |
 | Kit (ConvertKit) | Creators | Free (10,000 subscribers) | Creator-focused, simplicity |
 | Postmark | Transactional | Free (100 emails/mo) | 99%+ delivery, sub-1s median |
-| Bento | Dev-first, AI | $30/mo | Tanuki AI agent, MCP server |
+| SmartrMail | Ecommerce (Shopify) | $14/mo | ML product recs, fastest setup |
+| Bento | Dev-first | $30/mo | API-first, SOC 2, MCP integration |
 | beehiiv | Newsletters | Free (2,500 subscribers) | Growth tools, ad network |
 | Sendlane | Ecommerce | Custom pricing | Deep ecommerce, SMS |
 | Omnisend | Ecommerce | Free (250 contacts) | Email + SMS + push combined |
 
-That's fifteen platforms, and I could list another fifteen. The market is that crowded. A few things worth noting.
+That's sixteen platforms, and I could list another fifteen. The market is that crowded. A few things worth noting.
 
 Mailchimp's free tier dropped from 2,000 to 500 contacts, pushing many small businesses toward Kit or Brevo. Kit's free tier at 10,000 subscribers is the most generous in the market. beehiiv has emerged as the newsletter platform of choice since 2022, because Tyler Denk built it to solve the problems he encountered growing Morning Brew.
 
@@ -69,6 +70,12 @@ Mailchimp's free tier dropped from 2,000 to 500 contacts, pushing many small bus
 **HubSpot** reports 129% more leads and 36% more closed deals after one year of use. CRM-integrated email outperforms standalone email, especially in B2B. The flywheel effect (email feeds CRM, CRM makes email smarter) is HubSpot's real value proposition.
 
 **Brevo's** pricing model charges by email volume rather than subscriber count. You can have 100,000 subscribers and only pay for what you send. This rewards list hygiene rather than penalising list growth.
+
+**SmartrMail** was built specifically for ecommerce stores that want results without complexity. Its machine learning product recommendation engine analyses purchase and browsing history to generate personalised product emails automatically. For Shopify stores that don't have a dedicated email marketer, SmartrMail can have automated flows running in under 15 minutes — the fastest setup-to-revenue time of any ecommerce ESP.
+
+**Bento** takes a developer-first approach with a clean REST API, webhook-driven architecture, and SOC 2 compliance. It's one of the few ESPs with a native MCP server integration, making it particularly interesting for teams building programmatic email workflows. Bento charges a flat $30 per month regardless of list size, which makes it cost-effective at scale.
+
+**Omnisend** combines email, SMS, and push notifications in a single workflow builder. For ecommerce stores that want multi-channel automation without stitching together separate tools, Omnisend's unified approach means you can trigger an email, wait two days, then send an SMS follow-up — all in one flow. Their pre-built ecommerce workflows get stores generating automated revenue quickly.
 
 **Loops** thinks in product events and user journeys, not campaigns and audiences. Purpose-built for SaaS onboarding and product email. **Resend** treats email as a first-class engineering concern with React Email components. **Postmark** delivers transactional emails in under one second. They deliberately don't offer bulk marketing sends because it would compromise their transactional deliverability.
 
@@ -84,7 +91,7 @@ MailerLite deserves special mention in this tier. At $10 per month for up to 500
 
 **5,000 to 25,000 subscribers:** Now the decision matters more. Klaviyo at $60 to $150 per month is the clear choice for ecommerce because the revenue attribution alone pays for itself. ActiveCampaign at $49 per month gives you the most sophisticated automation at this price point, with 135+ triggers and actions that let you build genuinely complex behavioural flows. Kit at $49 per month is ideal if you're a creator or educator.
 
-here's the most important thing: don't choose based on your current list size. Choose based on where you'll be in 12 months. Migrating at 500 subscribers is trivial. Migrating at 25,000 with 15 active automations, a year of engagement data, and a warmed sending domain is a genuine project. Think ahead. The platform that's perfect for your first 500 subscribers might be completely wrong for your first 25,000.
+Here's the most important thing: don't choose based on your current list size. Choose based on where you'll be in 12 months. Migrating at 500 subscribers is trivial. Migrating at 25,000 with 15 active automations, a year of engagement data, and a warmed sending domain is a genuine project. Think ahead. The platform that's perfect for your first 500 subscribers might be completely wrong for your first 25,000.
 
 ### When to Switch
 
@@ -92,7 +99,7 @@ Migration is never fun. I won't pretend otherwise. But staying on the wrong plat
 
 Here are the specific signals that should trigger a platform evaluation:
 
-Your deliverability has dropped below 90% inbox placement and your platform's support can't explain why. Your automation needs exceed what the platform can handle without engineering workarounds. You're paying more than $500 per month and not using half the features, meaning you're overpaying for capabilities you don't need. A competitor's platform has introduced a feature that would materially change your results (like Klaviyo's predictive analytics for ecommerce, or Bento's AI agent for automation building). Your team spends more time fighting the platform than using it productively.
+Your deliverability has dropped below 90% inbox placement and your platform's support can't explain why. Your automation needs exceed what the platform can handle without engineering workarounds. You're paying more than $500 per month and not using half the features, meaning you're overpaying for capabilities you don't need. A competitor's platform has introduced a feature that would materially change your results (like Klaviyo's predictive analytics for ecommerce, or Bento's API-first approach to automation building). Your team spends more time fighting the platform than using it productively.
 
 Jimmy Kim, CEO of Sendlane, recommends running both platforms in parallel for two to four weeks during migration. This is excellent advice. It gives you a safety net and lets you validate that the new platform performs as expected before cutting over completely.
 

@@ -40,7 +40,7 @@ I tested this by sending two versions of a welcome email to a split audience. Th
 
 ### The Human-AI Workflow
 
-the best results come from collaboration, not full automation. Here's the workflow I'd recommend, based on what I've seen working across dozens of email programmes:
+The best results come from collaboration, not full automation. Here's the workflow I'd recommend, based on what I've seen working across dozens of email programmes:
 
 Start by briefing the AI with context. Brand voice guidelines, audience information, campaign goals, product details, examples of past winning emails. The quality of AI-generated email copy is directly proportional to the quality and specificity of the input. A prompt that says 'Write an email promoting our sale' will produce generic output. A prompt that includes your brand voice document, three examples of emails that performed well, the specific products on sale, the discount structure, and the audience segment will produce something much closer to usable.
 
@@ -64,7 +64,7 @@ Every major ESP now offers AI features, though the depth and utility vary signif
 | HubSpot | AI Content Writer | Email copy generation from prompts |
 | Braze | Sage AI | Copy generation, channel optimisation |
 | ActiveCampaign | AI Content Generator | Subject lines and body copy |
-| Bento | Tanuki AI | Full AI marketing agent for automations |
+| Bento | MCP Integration | API-driven automation via MCP server |
 | Seventh Sense | AI Send Time | Per-contact delivery optimisation |
 | Phrasee | AI Copywriting | Enterprise subject line and copy optimisation |
 
@@ -80,9 +80,9 @@ Anthropic's Model Context Protocol (MCP) enables AI models to directly interact 
 
 Mailjet has an open-source MCP server for email marketing that provides read-only access for AI models like Claude and GPT. This lets you ask questions about your email performance in plain English and get answers drawn from your actual data. 'What was my open rate trend for the last 12 weeks?' gets you a direct answer with the data, not a report you need to interpret.
 
-Bento launched Tanuki AI in January 2026, and it represents the first true AI marketing agent for email automations. It connects via MCP to your email data and can analyse campaign performance, suggest improvements, and build automations through a natural language interface. Instead of clicking through a flow builder, you describe what you want: 'Create a welcome series that sends three emails over five days, with the second email triggered only if they opened the first.' Tanuki builds it.
+Bento offers an MCP server integration that lets AI models interact with your email data programmatically — querying campaign performance, managing contacts, and triggering sends through a standardised API interface. For developer-heavy teams already working with AI coding tools, this kind of integration removes the need to context-switch between a conversation and a dashboard.
 
-This is the beginning of AI-native email marketing. The interface for creating and managing email campaigns is shifting from graphical flow builders and WYSIWYG editors toward conversational AI that understands your goals and builds the execution.
+These are early implementations, and the space is moving fast. The interface for creating and managing email campaigns is gradually shifting from purely graphical flow builders toward more programmatic and conversational approaches. We're not there yet — but the direction is clear.
 
 The implications are significant. A solo founder who couldn't justify hiring an email marketing specialist can now describe their goals to an AI agent and get a professionally structured email programme. An experienced marketer can move faster by describing complex flows in natural language rather than clicking through builder interfaces. An agency can serve more clients by using AI agents to handle the routine build work while humans focus on strategy and creative direction.
 
@@ -94,7 +94,7 @@ The AI-native ESP workflow inverts this. AI analyses customer data and identifie
 
 The shift is from 'build campaigns' to 'approve recommendations.'
 
-Early examples of this shift are already visible. Bento's Tanuki AI builds automations from natural language. Klaviyo's predictive analytics identifies at-risk customers before humans would notice the pattern. Braze's Sage AI generates copy and optimises channel selection.
+Early examples of this shift are already visible. Klaviyo's predictive analytics identifies at-risk customers before humans would notice the pattern. Braze's Sage AI generates copy and optimises channel selection. MCP integrations from platforms like Bento and Mailjet let AI models query email data directly.
 
 The key distinction is this: AI handles optimisation (what content, when to send, who to target), while humans handle strategy (why we're sending, brand voice guardrails, ethical boundaries, overall programme direction). This division of labour plays to each side's strengths. AI is better at processing data and finding patterns. Humans are better at judgment, creativity, and understanding context.
 
@@ -124,7 +124,7 @@ And here's what not to do:
 
 I'm going to make predictions, which means some of these will be wrong. But the direction is clear, even if the timeline is uncertain.
 
-**AI agents that build and manage email automations from natural language instructions.** Bento's Tanuki is the early mover. By 2028, I'd expect every major ESP to offer conversational automation building. The flow builder interface won't disappear entirely, but it'll become the 'power user' tool rather than the primary interface. Just as most people use a visual website builder rather than hand-coding HTML, most email marketers will describe their automations in natural language rather than building them visually.
+**AI agents that build and manage email automations from natural language instructions.** There are early experiments in this space, but nobody has truly cracked it yet. By 2028, I'd expect every major ESP to offer conversational automation building. The flow builder interface won't disappear entirely, but it'll become the 'power user' tool rather than the primary interface. Just as most people use a visual website builder rather than hand-coding HTML, most email marketers will describe their automations in natural language rather than building them visually.
 
 **Real-time content personalisation powered by large language models.** Each recipient gets genuinely unique copy, not just different product recommendations inserted into the same template. The entire email, from subject line to body to CTA, is generated for that specific person based on their behaviour, preferences, and stage in the customer journey. This is computationally expensive today but will become practical as inference costs continue to drop.
 
