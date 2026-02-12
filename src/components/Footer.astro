@@ -21,12 +21,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
 <footer class="emb-footer">
   <div class="emb-footer-inner">
     <div class="emb-footer-left">
-      <span class="emb-footer-author">Built by George Hartley</span>
-      <span class="emb-footer-links">
-        <a href="https://smartrmail.com" target="_blank" rel="noopener noreferrer">SmartrMail</a>
-        <span class="emb-footer-dot">&middot;</span>
-        <a href="https://obooko.com" target="_blank" rel="noopener noreferrer">Obooko</a>
-      </span>
+      <span class="emb-footer-author">By George Hartley, founder of <a href="https://smartrmail.com" target="_blank" rel="noopener noreferrer">SmartrMail</a> <a href="https://bluethumb.com.au" target="_blank" rel="noopener noreferrer">Bluethumb</a> and <a href="https://obooko.com" target="_blank" rel="noopener noreferrer">Obooko</a></span>
       <span class="emb-footer-mel">Made with 🧡 in Melbourne</span>
     </div>
     <div class="emb-footer-right">
@@ -95,20 +90,13 @@ const isSplash = route?.entry?.data?.template === 'splash';
     font-size: 0.85rem;
     color: #888;
   }
-  .emb-footer-links {
-    font-size: 0.75rem;
-    opacity: 0.6;
-  }
-  .emb-footer-links a {
+  .emb-footer-author a {
     color: #888;
     text-decoration: none;
     transition: color 0.2s;
   }
-  .emb-footer-links a:hover {
+  .emb-footer-author a:hover {
     color: #ff6b1a;
-  }
-  .emb-footer-dot {
-    margin: 0 0.25rem;
   }
   .emb-footer-mel {
     font-size: 0.75rem;

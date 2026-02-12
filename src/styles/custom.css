@@ -104,6 +104,7 @@ body {
 .header {
   background: #ffffff !important;
   border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 0.5rem;
 }
 
 /* Sidebar on doc pages */
@@ -125,6 +126,19 @@ nav.sidebar a:hover {
 nav.sidebar a[aria-current='page'] {
   color: #ff6b1a;
   border-color: #ff6b1a;
+  font-weight: 600;
+}
+
+/* Fix sidebar active item highlight — Starlight uses accent bg on active item */
+nav.sidebar [aria-current='page'],
+nav.sidebar a[aria-current='page'] {
+  background-color: transparent !important;
+}
+
+/* Override Starlight's accent-based highlight backgrounds */
+.sidebar-content [aria-current='page'] {
+  color: #ff6b1a !important;
+  background: transparent !important;
 }
 
 /* Headings in monospace */
