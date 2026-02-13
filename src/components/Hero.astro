@@ -7,6 +7,18 @@ const isSplash = route?.entry?.data?.template === 'splash';
 
 {isSplash ? (
   <div class="hero-landing">
+    <!-- Draft Banner — remove before public launch -->
+    <div class="draft-banner">
+      <div class="draft-banner-track">
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+        <span class="draft-banner-text">DRAFT ONLY — Don't Share Until Friday 20 February — DON'T SHARE</span>
+      </div>
+    </div>
+
     <!-- GitHub Badge -->
     <div class="github-badge-wrap">
       <a href="https://github.com/CosmoBlk/email-marketing-bible" target="_blank" rel="noopener noreferrer" class="github-badge">
@@ -168,7 +180,12 @@ const isSplash = route?.entry?.data?.template === 'splash';
       </div>
     </section>
 
-    <!-- Email Capture -->
+    <!--
+      Email Capture — COMMENTED OUT until Resend is hooked up and PDF is ready.
+      TODO: Restore this section at launch once Resend integration is complete
+      and the PDF download is working via email delivery. — Feb 2026
+    -->
+    <!--
     <section class="capture-section">
       <div class="capture-card">
         <h2 class="section-heading">Download the complete Email Marketing Bible as PDF</h2>
@@ -181,6 +198,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
         <p class="capture-status" id="form-status"></p>
       </div>
     </section>
+    -->
 
     <!-- About -->
     <section class="about-section">
@@ -193,6 +211,8 @@ const isSplash = route?.entry?.data?.template === 'splash';
     </section>
   </div>
 
+  <!-- Email form script — commented out with email capture. Restore with the form above. -->
+  <!--
   <script is:inline>
     document.getElementById('email-form')?.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -224,11 +244,37 @@ const isSplash = route?.entry?.data?.template === 'splash';
       }
     });
   </script>
+  -->
 
   <style>
     .hero-landing {
       max-width: 100%;
       overflow-x: hidden;
+    }
+
+    /* Draft Banner — remove before public launch */
+    .draft-banner {
+      background: #ff6b1a;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0.5rem 0;
+    }
+    .draft-banner-track {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    .draft-banner-text {
+      display: inline-block;
+      padding: 0 3rem;
+      font-family: var(--sl-font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 0.05em;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* GitHub Badge */

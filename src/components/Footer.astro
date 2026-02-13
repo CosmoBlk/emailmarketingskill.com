@@ -5,6 +5,11 @@ const route = Astro.locals.starlightRoute;
 const isSplash = route?.entry?.data?.template === 'splash';
 ---
 
+<!--
+  Doc page email capture — COMMENTED OUT until Resend is hooked up and PDF is ready.
+  TODO: Restore at launch once Resend integration is complete. — Feb 2026
+-->
+<!--
 {!isSplash && (
   <div class="doc-email-capture">
     <h3>Download the Email Marketing Bible as PDF</h3>
@@ -17,6 +22,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
     <p class="doc-capture-status" id="doc-form-status"></p>
   </div>
 )}
+-->
 
 <footer class="emb-footer">
   <div class="emb-footer-inner">
@@ -35,6 +41,8 @@ const isSplash = route?.entry?.data?.template === 'splash';
   </div>
 </footer>
 
+<!-- Doc form script — commented out with email capture. Restore with the form above. -->
+<!--
 {!isSplash && (
   <script is:inline>
     document.getElementById('doc-email-form')?.addEventListener('submit', async (e) => {
@@ -68,6 +76,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
     });
   </script>
 )}
+-->
 
 <style>
   .emb-footer {
