@@ -10,7 +10,7 @@ sidebar:
 
 *By George Hartley | February 2026*
 
-For every dollar you spend on email marketing, you get 36 back. No other channel comes close - not for ROI at scale. And email has been declared dead roughly once a year since the early 2000s and it keeps quietly outperforming everything else.
+For every dollar you spend on email marketing, you get 36 back. No other channel comes close, not for ROI at scale. Email has been declared dead roughly once a year since the early 2000s and it keeps quietly outperforming everything else.
 
 I've built multiple startups that relied on email marketing, including popular email automation SaaS SmartrMail, and spent years watching what actually works across thousands of brands. I've seen patterns repeat across industries: the same mistakes destroying the same campaigns, the same strategies quietly generating the same outsized returns. This guide is the result of crawling 908 sources, extracting 4,798 insights, and distilling them into something you can actually use. Every claim is backed by data, every recommendation tested by practitioners.
 
@@ -38,7 +38,7 @@ Forty of the world's best email marketing practitioners are referenced throughou
 
 The research behind this guide comes from 908 sources across industry reports (Litmus, Klaviyo, Campaign Monitor, HubSpot, Salesforce), practitioner blogs, academic research, platform documentation, and community discussions from Reddit, HubSpot Community, and industry forums. Where multiple sources reported conflicting numbers, I used the most commonly cited figure or the one from the most authoritative source.
 
-I built this knowledge base, and the Claude Code skill, initially for myself. I wanted to shortcut my own email marketing with AI - give Claude the full picture so it could help me make better decisions faster. Then I figured if it's useful to me, it's probably useful to everyone else too. So here it is.
+I built this knowledge base, and the Claude Code skill, initially for myself. I wanted to shortcut my own email marketing with AI, give Claude the full picture so it could help me make better decisions faster. Then I figured if it's useful to me, it's probably useful to everyone else too. So here it is.
 
 The research crawler application is open source at [github.com/CosmoBlk/emb-research](https://github.com/CosmoBlk/emb-research).
 
