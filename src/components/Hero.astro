@@ -45,7 +45,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
         <div class="terminal-header">
           <span class="terminal-label">Terminal</span>
           <button class="terminal-copy" onclick="
-            navigator.clipboard.writeText('git clone https://github.com/CosmoBlk/email-marketing-bible.git\ncp -r email-marketing-bible ~/.claude/skills/email-marketing-bible');
+            navigator.clipboard.writeText('git clone https://github.com/CosmoBlk/email-marketing-bible.git ~/.claude/skills/email-marketing-bible');
             this.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><polyline points=&quot;20 6 9 17 4 12&quot;></polyline></svg><span>Copied</span>';
             setTimeout(() => this.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;><rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;13&quot; height=&quot;13&quot; rx=&quot;2&quot; ry=&quot;2&quot;></rect><path d=&quot;M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1&quot;></path></svg><span>Copy</span>', 2000);
           ">
@@ -54,8 +54,7 @@ const isSplash = route?.entry?.data?.template === 'splash';
           </button>
         </div>
         <div class="terminal-body">
-          <div class="terminal-line"><span class="terminal-prompt">$</span> git clone https://github.com/CosmoBlk/email-marketing-bible.git</div>
-          <div class="terminal-line"><span class="terminal-prompt">$</span> cp -r email-marketing-bible ~/.claude/skills/email-marketing-bible</div>
+          <div class="terminal-line"><span class="terminal-prompt">$</span> git clone https://github.com/CosmoBlk/email-marketing-bible.git ~/.claude/skills/email-marketing-bible</div>
         </div>
       </div>
       <p class="terminal-caption">Installs the email marketing skill to your Claude Code project</p>
