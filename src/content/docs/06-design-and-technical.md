@@ -48,7 +48,7 @@ Why? Because Microsoft Outlook uses Word's rendering engine (yes, the word proce
 
 **Hybrid design (also called spongy design) is your fallback.** It uses fluid tables, percentage-based widths, and conditional comments to create emails that adapt to screen size without relying on media queries. The email looks good at any width because the underlying structure is flexible by default.
 
-**Mark Robbins has pioneered CSS-only techniques for email** that push what's possible without JavaScript (which is blocked in all email clients). His work on CSS-only interactive components, accessibility improvements, and progressive enhancement has advanced the field considerably. If you're building emails at a technical level, study his work.
+**[Mark Robbins](https://www.goodemailcode.com/) has pioneered CSS-only techniques for email** that push what's possible without JavaScript (which is blocked in all email clients). His work on CSS-only interactive components, accessibility improvements, and progressive enhancement has advanced the field considerably. If you're building emails at a technical level, study his work.
 
 **Common email client rendering differences to test for:**
 

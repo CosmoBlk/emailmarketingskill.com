@@ -185,7 +185,7 @@ I've watched these mistakes play out across thousands of brands. They're predict
 
 **Treating email as a broadcast channel.** Email works best as a conversation. 'George from Acme' gets 5-15% higher open rates than 'Acme' alone. Use a real name, allow replies, and write like you're talking to one person. Joanna Wiebe (founder of Copyhackers, who coined the term 'conversion copywriting') teaches that before writing any email, you should have a specific person in mind. The email should read like a message written for that one person.
 
-Too many brands plan their email calendar around 'what do we want to say this week?' when the question should be 'what does this subscriber need to hear right now?' Kath Pay (founder of Holistic Email Marketing, 26+ years in the industry) has shared case studies where brands shifting from broadcast to lifecycle-triggered emails saw 20-40% lifts in email-attributed revenue without sending more emails.
+Too many brands plan their email calendar around 'what do we want to say this week?' when the question should be 'what does this subscriber need to hear right now?' [Kath Pay](https://holisticemail.com) (founder of Holistic Email Marketing, co-founder of Holistic Email Academy, 28+ years in the industry) has shared case studies where brands shifting from broadcast to lifecycle-triggered emails saw 20-40% lifts in email-attributed revenue without sending more emails.
 
 **Not testing.** Only one in seven A/B tests produces a statistically significant winner. That means six out of seven are inconclusive. Don't let that discourage you. The ones that do win compound over every future send. The incremental cost of testing is almost zero, but most brands still don't do it. Chapter 8 covers the testing framework.
 

@@ -182,7 +182,7 @@ Your call to action is where everything either converts or doesn't. After all th
 
 **Specific button text massively outperforms generic text.** "Get my 20% discount" beats "Shop now." "Download the template" beats "Click here." "Start my free trial" beats "Learn more." Specificity tells the reader exactly what will happen when they click, which reduces friction and increases confidence.
 
-**Chris Orzechowski teaches that your CTA should be the natural conclusion of your email's argument.** If your email has done its job, the reader should arrive at the CTA and think, "Obviously." The CTA isn't a pivot. It's a destination the email has been walking toward the entire time.
+**[Chris Orzechowski](https://www.westegg.agency/) teaches that your CTA should be the natural conclusion of your email's argument.** If your email has done its job, the reader should arrive at the CTA and think, "Obviously." The CTA isn't a pivot. It's a destination the email has been walking toward the entire time.
 
 **Place your CTA both above the fold and below the main content.** This dual placement produces roughly 35% more total clicks than a single CTA placement. Some readers are ready to act immediately. Others need to read the full email first. Serve both.
 

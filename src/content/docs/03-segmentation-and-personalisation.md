@@ -12,7 +12,7 @@ The gap between knowing segmentation matters and actually doing it well is where
 
 ### Beyond First-Name Personalisation
 
-Kath Pay (founder of Holistic Email Marketing) has been saying this for years: personalisation that stops at "Hi {first_name}" can actually hurt performance. Her research finding has become widely cited: emails personalised with just the recipient's first name in the subject line, where the body content is not personalised, can perform worse than emails with no personalisation at all. The first name sets an expectation of personal relevance that generic content fails to deliver, creating a disconnect.
+[Kath Pay](https://holisticemail.com) (founder of Holistic Email Marketing, co-founder of Holistic Email Academy) has been saying this for years: personalisation that stops at "Hi {first_name}" can actually hurt performance. Her research finding has become widely cited: emails personalised with just the recipient's first name in the subject line, where the body content is not personalised, can perform worse than emails with no personalisation at all. The first name sets an expectation of personal relevance that generic content fails to deliver, creating a disconnect.
 
 Real personalisation means the content itself changes based on who's receiving it. Dynamic content blocks that show different products to different segments. Subject lines that reference actual behaviour. Send times optimised to individual habits. Product recommendations based on purchase history, not random bestsellers.
 

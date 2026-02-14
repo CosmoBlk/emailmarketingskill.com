@@ -72,13 +72,13 @@ Removing hero images from emails has improved open-to-click rates in multiple do
 
 Adding preview text consistently produces roughly 5% higher open rates. It's one of the simplest, most reliable improvements you can make.
 
-Perhaps the most counterintuitive finding: reducing email frequency sometimes increases total revenue. How? By improving inbox placement. When you send less frequently but to more engaged recipients, inbox providers reward you with better placement, and the emails you do send perform significantly better. More isn't always more.
+Perhaps the most counterintuitive finding: reducing email frequency sometimes increases total revenue. How? By improving inbox placement. When you send less frequently but to more engaged recipients, inbox providers reward you with better placement, and the emails you do send perform significantly better. More isn't always more. A caveat: frequency changes should always follow engagement signals, lifecycle stage, and subscriber intent — not be applied as a universal lever. For smaller lists, high-ticket products, B2B audiences, or brands recovering from deliverability issues, increasing frequency without engagement controls can backfire.
 
 **Multivariate testing vs A/B testing.** A/B testing compares two versions with one variable changed. Multivariate testing changes multiple variables simultaneously and measures how different combinations perform. Multivariate is appealing because it's faster in theory, testing many things at once. In practice, it requires much larger sample sizes to reach significance because you're splitting traffic across many more variants. For most email lists under 100,000, stick to A/B testing. Multivariate testing becomes practical only at significant scale.
 
 ### Continuous Improvement
 
-Testing without a system is just random experimentation. You need a process.
+Testing without a system is just random experimentation. You need a process. And the right framing matters: A/B testing isn't just about optimising variables — it's structured learning. Every test should start with a behavioural assumption (not just "will red beat blue?"), use success metrics aligned to that assumption, and produce a learning you can apply beyond the individual send. Underpowered tests with tiny samples and vague hypotheses waste time. Well-designed tests with clear hypotheses build compounding knowledge.
 
 **Jeanne Jennings' systematic approach** is the one I'd recommend: analyse your current performance to identify the weakest link, form a hypothesis about what might improve it, test that hypothesis with a proper A/B test, apply the winning variant, and repeat. The key word is systematic. Each test builds on the learnings of the previous one.
 
